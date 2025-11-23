@@ -18,18 +18,12 @@ def select_n_tab(smp):
     return n_tab
 
 def open_tab(tab, log, num):
-    # print(tab[0])
-    # if tab[0] in log:
-    #     print("no")
     
-    # log_stored.add(tab[0])
-    # for k in tab:
-    #     print(k)
     if tab[0] in log:
         print("not opened")
         return num
     else:
-        # os.system(tab[0])
+        os.system(tab[0])
         print("opened")
         log.add(tab[0])
         num += 1
@@ -55,10 +49,10 @@ def main():
         num_meter = open_tab(final_commands, log_stored, num_meter)
         run = if_com(num_meter)
         time.sleep(.1)
-        # subprocess.run([
-        #     "powershell",
-        #     "Get-Process chrome | ForEach-Object { $_.CloseMainWindow() }"
-        # ])
+        subprocess.run([
+            "powershell",
+            "Get-Process chrome | ForEach-Object { $_.CloseMainWindow() }"
+        ])
 
 
     
