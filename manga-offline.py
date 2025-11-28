@@ -48,7 +48,7 @@ def main():
         final_commands = select_n_tab(raw_command)
         num_meter = open_tab(final_commands, log_stored, num_meter)
         run = if_com(num_meter)
-        time.sleep(.1)
+        time.sleep(5)
         subprocess.run([
             "powershell",
             "Get-Process chrome | ForEach-Object { $_.CloseMainWindow() }"
